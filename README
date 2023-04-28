@@ -1,0 +1,15 @@
+# Bachelor Thesis
+
+## How to reproduce the results
+### Requirements
+Debian (10) Buster
+
+### Install workplace
+1. `git clone https://github.com/huhndev/bachelor-thesis.git`
+2. Run `bash bachelor-thesis/deploy.sh` as root
+
+## How to connect to vtysh for in depth diagnostics of the routing daemons
+[noecho rx] telnet localhost [ospfd/zebra]
+
+## How to restore the workplace after a failed run 
+`python -m ipmininet.clean` as root
