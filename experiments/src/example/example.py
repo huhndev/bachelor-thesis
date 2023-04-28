@@ -7,14 +7,11 @@ from ipmininet.cli import IPCLI
 from ipmininet.ipnet import IPNet
 from ipmininet.iptopo import IPTopo
 
-"""This file contains a simple network topology"""
-
-
 class SimpleTopo(IPTopo):
 
     def build(self, *args, **kwargs):
 
-	#Hosts
+        #Hosts
         h1 = self.addRouter('h1')
         h2 = self.addRouter('h2')
         h3 = self.addRouter('h3')
@@ -35,19 +32,10 @@ class SimpleTopo(IPTopo):
 
 def perfTest():
 
-    print("*** Waiting for network to start ***")
+    print("*** Waiting for network to start")
     for i in range(30,0,-1):
         print(f"{i}  ", end="\r", flush=True)
         time.sleep(1) 
-
-    #print("*** Dumping switch connections")
-    #dumpNodeConnections(net.switches)
-
-    #print("*** Dumping host connections")
-    #dumpNodeConnections(net.hosts)
-
-    #print("*** Testing network connectivity")
-    net.pingAll()
 
     print("*** Testing bandwidth between hosts")
     
@@ -59,9 +47,9 @@ def perfTest():
     h1.cmd('iperf3 -s -p 5001 &')
     h1.cmd('iperf3 -s -p 5002 &')
     h1.cmd('iperf3 -s -p 5003 &')
-    h2.cmd('iperf3 -c h1 -p 5001 -t 30 -O 10 > /root/results/example-h2.out &') #-J --logfile /root/results/example-h2.json &')
-    h3.cmd('iperf3 -c h1 -p 5003 -t 30 -O 10 > /root/results/example-h3.out &') #-J --logfile /root/results/example-h3.json &')
-    h4.cmd('iperf3 -c h1 -p 5002 -t 30 -O 10 > /root/results/example-h4.out &') #-J --logfile /root/results/example-h4.json &')  
+    h2.cmd('iperf3 -c h1 -p 5001 -t 30 -O 10 -J --logfile experiments/results/example/example-h2-h1.json &')
+    h3.cmd('iperf3 -c h1 -p 5003 -t 30 -O 10 -J --logfile experiments/results/example/example-h3-h1.json &')
+    h4.cmd('iperf3 -c h1 -p 5002 -t 30 -O 10 -J --logfile experiments/results/example/example-h4-h1.json &')  
     for i in range(50,0,-1):
         print(f"{i}  ", end="\r", flush=True)
         time.sleep(1)
