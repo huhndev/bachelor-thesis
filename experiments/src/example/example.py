@@ -47,9 +47,9 @@ def perfTest():
     h1.cmd('iperf3 -s -p 5001 &')
     h1.cmd('iperf3 -s -p 5002 &')
     h1.cmd('iperf3 -s -p 5003 &')
-    h2.cmd('iperf3 -c h1 -p 5001 -t 30 -O 10 -J --logfile experiments/results/example/example-h2-h1.json &')
-    h3.cmd('iperf3 -c h1 -p 5003 -t 30 -O 10 -J --logfile experiments/results/example/example-h3-h1.json &')
-    h4.cmd('iperf3 -c h1 -p 5002 -t 30 -O 10 -J --logfile experiments/results/example/example-h4-h1.json &')  
+    h2.cmd('iperf3 -c h1 -p 5001 -t 30 -O 10 -J --logfile experiments/results/example-h2-h1.json &')
+    h3.cmd('iperf3 -c h1 -p 5003 -t 30 -O 10 -J --logfile experiments/results/example-h3-h1.json &')
+    h4.cmd('iperf3 -c h1 -p 5002 -t 30 -O 10 -J --logfile experiments/results/example-h4-h1.json &')  
     for i in range(50,0,-1):
         print(f"{i}  ", end="\r", flush=True)
         time.sleep(1)
