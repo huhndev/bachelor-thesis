@@ -15,13 +15,14 @@ def generate_traffic():
     for traffic in traffic_sorted:
         src = 'h' + str(traffic['src'])
         dst = 'h' + str(traffic['dst'])
+        size = str(traffic['size']/1024)
         port = 5000 + traffic['src']
         log_file = 'experiments/results/{}-{}-{}.json'.format(traffic['start_time'], src, dst)
         start_time = traffic['start_time'] - time
         time = traffic['start_time']
         commands.append('time.sleep({})\n'.format(start_time))
         commands.append("{}"
-                        ".cmd('iperf3 -c {} -p {} -J --logfile {} &')".format(src, dst, port, log_file))
+                        ".cmd('iperf3 -c {} -p {} -n {}K -J --logfile {} &')".format(src, dst, port, size, log_file))
         listen_commands.append("{}.cmd('iperf3 -s -p {} &')".format(dst, port))
     print('\n'.join(map(str, listen_commands)) + '\n')
     print('\n'.join(map(str, commands)))
