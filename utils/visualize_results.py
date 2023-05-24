@@ -39,9 +39,9 @@ for file in files:
 for traffic in values:
     plt.plot(traffic['val']['x'], traffic['val']['y'], label = traffic['name'])
 
-plt.xlabel('s')
-plt.ylabel('Mbit/s') 
-plt.title('Traffic Overview')
+plt.xlabel('Time [s]')
+plt.ylabel('Speed [Mbit/s]') 
+#plt.title('Traffic Overview')
 plt.legend()
 
 # save graph as a png
