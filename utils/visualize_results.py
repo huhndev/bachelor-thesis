@@ -1,9 +1,10 @@
 import json
 import matplotlib.pyplot as plt
 import os
+import glob
 
 # get all filenames from results directory
-files = os.listdir('experiments/results/')
+files = glob.glob('*.json')
 files.sort()
 
 # initialize empty lists for storing values
@@ -15,7 +16,7 @@ time_zero = 0
 # loop through files
 for file in files:
     # open file and store values in variables
-    with open('experiments/results/' + file) as f:
+    with open('./' + file) as f:
         data = json.load(f)
         traffic_flow = file.split('-')[1] + '-' + file.split('-')[2]
         traffic_flow = traffic_flow.split('.')[0]
@@ -45,4 +46,4 @@ plt.ylabel('Speed [Mbit/s]')
 plt.legend()
 
 # save graph as a png
-plt.savefig('graph.png')
+plt.savefig('results_graph.png')
