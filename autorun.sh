@@ -17,7 +17,7 @@ do
 	python experiments/src/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO.py
 	deactivate
 
-	mkdir experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
+	mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
 	#source ../venv/networkx/bin/activate
 	#python utils/visualize_results.py
@@ -37,7 +37,7 @@ do
         python experiments/src/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO.py
         deactivate
 
-        mkdir experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
+        mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
         #source ../venv/networkx/bin/activate
         #python utils/visualize_results.py
@@ -57,7 +57,7 @@ do
         python experiments/src/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO.py
         deactivate
 
-        mkdir experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
+        mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
         #source ../venv/networkx/bin/activate
         #python utils/visualize_results.py
@@ -77,7 +77,7 @@ do
         python experiments/src/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO.py
         deactivate
 
-        mkdir experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
+        mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
         #source ../venv/networkx/bin/activate
         #python utils/visualize_results.py
