@@ -19,13 +19,6 @@ do
 
 	mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
-	#source ../venv/networkx/bin/activate
-	#python utils/visualize_results.py
-	#python utils/visualize_results_table.py
-	#python utils/visualize_results_table_per_node.py
-	#deactivate
-
-	#mv results_* experiments/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
 	mv experiments/results/0-* experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
 done
 
@@ -39,13 +32,6 @@ do
 
         mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
-        #source ../venv/networkx/bin/activate
-        #python utils/visualize_results.py
-        #python utils/visualize_results_table.py
-        #python utils/visualize_results_table_per_node.py
-        #deactivate
-
-        #mv results_* experiments/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
         mv experiments/results/0-* experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
 done
 
@@ -59,13 +45,6 @@ do
 
         mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
-        #source ../venv/networkx/bin/activate
-        #python utils/visualize_results.py
-        #python utils/visualize_results_table.py
-        #python utils/visualize_results_table_per_node.py
-        #deactivate
-
-        #mv results_* experiments/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
         mv experiments/results/0-* experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
 done
 
@@ -79,12 +58,5 @@ do
 
         mkdir -p experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i
 
-        #source ../venv/networkx/bin/activate
-        #python utils/visualize_results.py
-        #python utils/visualize_results_table.py
-        #python utils/visualize_results_table_per_node.py
-        #deactivate
-
-        #mv results_* experiments/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
         mv experiments/results/0-* experiments/results/$EXPERIMENT/$SCHEDULING_ALGO-$LINK_ALGO/run$i/
 done
