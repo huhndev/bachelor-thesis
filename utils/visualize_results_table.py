@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import os
 import glob
 
-# get all filenames from results directory
 files = glob.glob('*.json')
 files.sort()
 
@@ -35,5 +34,4 @@ for file in files:
 if (time_stamp_exists):
     table = plt.table(cellText=table_data, colLabels=['src', 'dst', 'size', 'start time', 'duration', 'avg speed'], loc='center')
 plt.axis('off')
-#plt.show()
 plt.savefig('results_table.png', bbox_inches='tight', dpi=150)

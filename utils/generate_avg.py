@@ -31,6 +31,3 @@ for traffic in avg_obj:
     current_traffic['end']['sum_sent']['bits_per_second'] = current_traffic['end']['sum_sent']['bits_per_second'] / len(runs)
     with open('run-avg/' + traffic + '-avg.json', 'w') as outfile:
         json.dump(current_traffic, outfile)
-
-
-

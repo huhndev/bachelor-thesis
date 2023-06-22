@@ -4,7 +4,6 @@ import os
 import glob
 import csv
 
-# get all filenames from results directory
 files = glob.glob('*.json')
 files.sort()
 

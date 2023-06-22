@@ -2,7 +2,6 @@ import json
 import matplotlib.pyplot as plt
 import os
 
-# get all filenames from results directory
 files = os.listdir('experiments/results/')
 files.sort()
 
@@ -47,5 +46,4 @@ for src in src_data:
 
 table = plt.table(cellText=table_data, colLabels=['src', 'total size', 'total duration', 'total avg speed'], loc='center')
 plt.axis('off')
-#plt.show()
 plt.savefig('results_table_per_node.png', bbox_inches='tight', dpi=150)

@@ -2,7 +2,6 @@ import json
 import matplotlib.pyplot as plt
 import os
 
-# get all filenames from results directory
 files = os.listdir('experiments/results/')
 files.sort()
 
